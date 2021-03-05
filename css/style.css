@@ -1,0 +1,548 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+/* intro section area starts here */
+.big-wrapper{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/intro-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+}
+.big-wrapper .inner{
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative; 
+}
+.inner .mynavbar{
+    display: flex;
+    flex-wrap: wrap;
+    width: 20%;
+    height: 9vh;
+    background: black;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+}
+#click {
+    display: none;
+}
+.menu-btn i{
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: rgb(253, 0, 0);
+}
+.mynavbar .logo{
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.mynavbar .menu-links{
+    position: fixed;
+    top: 9vh;
+    width: 20%;
+    height: 0px;
+    background: rgb(0, 0, 0);
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    transition: all 0.5s ease-in-out;
+}
+.menu-links li{
+    list-style: none;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+}
+.menu-links li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-left: 1.5rem;
+}
+.menu-links li a:hover,.menu-links li .active{
+    color: rgb(255, 0, 0);
+}
+#click:checked ~ .menu-links{
+    height: 40vh;
+}
+#click:checked ~.menu-btn i::before{
+    content: "\f00d";
+}
+.inner .intro{
+    width: 80%;
+    text-align: center;
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.intro h3{
+    font-size: 1rem;
+    letter-spacing: 5px;
+    font-weight: 800;
+    color: rgb(255, 0, 0);
+    text-transform: uppercase;
+}
+.intro h1{
+    font-size: 4.5rem;
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin-bottom: 1rem;
+}
+.intro p{
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+}
+.intro .my-letter{
+    color: rgb(107, 107, 107);
+    margin-right: 1rem;
+}
+.intro button{
+    width: 250px;
+    height: 60px;
+    border: 3px solid rgb(107, 107, 107); 
+    background: none;
+    transition: all 0.3s ease;
+    outline: none;
+}
+.intro button a{
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-decoration: none;
+}
+.intro button:hover{
+    border-color: rgb(255, 0, 0);
+}
+.inner .social{
+    position: absolute;
+    top: 85vh;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.social i{
+    color: #fff;
+    font-size: 2rem;
+    margin: 15px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.social i:hover{
+    color: rgb(255, 0, 0);
+}
+/* PROFILE AND SKILL SECTION START HERE */
+.my-container{
+    max-width: 1100px;
+    padding: 5%;
+    margin: 0 auto;
+}
+.flex-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.about {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.about h3{
+    font-size: 1.2rem;
+    color: rgb(255, 0, 0);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.about h2{
+    font-size: 2.3rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 1.5rem;
+}
+.about p{
+    font-size: 1.1rem;
+    color: grey;
+    font-weight: 400;
+    line-height: 1.8rem;
+    padding: 0 20%;
+    text-transform: capitalize;
+}
+.my-profile,.my-skills{
+    width: 48%;
+}
+.my-profile h3{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.2rem;
+}
+.my-profile p{
+    font-size: 1rem;
+    color: grey;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+    padding-right: 5%;
+}
+.my-profile .profile-p{
+    font-size: 1rem;
+    color: grey;
+    line-height: 1.8rem;
+    margin-bottom: 6rem;
+    text-transform: capitalize;
+    padding-right: 5%;
+}
+.my-profile h4{
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    letter-spacing: 2px;
+}
+/*  SKILL SECTION START HERE */
+.my-skills h3{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+.my-skills p{
+    font-size: 1.1rem;
+    color: grey;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+    padding-right: 5%;
+}
+.skills-bar{
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px 30px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+}
+.skills-bar .bar{
+    margin: 20px 0;
+}
+.skills-bar .info{
+    margin-bottom: 1.8rem;
+}
+.skills-bar .bar:first-child{
+    margin-top: 0px;
+}
+.skills-bar .bar .info span{
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.skills-bar .bar .progress-line{
+    position: relative;
+    width: 100%;
+    height: 0.625rem;
+    background: #e9e9e9;
+    transform: scaleX(0);
+    transform-origin: left;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.05),
+                      0px 1px  rgba(255,255,255,0.8);
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    animation-delay: 2s;                  
+}
+.bar .progress-line span{
+    height: 100%;
+    width: 80%;
+    background: rgb(63, 63, 63);
+    position: absolute;
+    border-radius: 10px;
+}
+@keyframes animate {
+    100%{
+        transform: scaleX(1);
+    }
+}
+.progress-line.html span{
+    width: 90%;
+}
+.progress-line.css span{
+    width: 85%;
+}
+.progress-line.bootstrap span{
+    width: 80%;
+}
+.progress-line.photoshop span{
+    width: 90%;
+}
+.progress-line.javascript span{
+    width: 20%;
+}
+.progress-line.jquery span{
+    width: 30%;
+}
+.bar .progress-line span::before{
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: rgb(65, 65, 65);
+}
+.bar .progress-line span::after{
+    position: absolute;
+    content: "80%";
+    background: rgb(65, 65, 65);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    right: 0;
+    top: -28px;
+    padding: 1px 8px;
+    border-radius: 3px;
+}
+.progress-line.html span::after{
+    content: "90%";
+}
+.progress-line.css span::after{
+    content: "85%";
+}
+.progress-line.bootstrap span::after{
+    content: "80%";
+}
+.progress-line.photoshop span::after{
+    content: "90%";
+}
+.progress-line.javascript span::after{
+    content: "20%";
+}
+.progress-line.jquery span::after{
+    content: "30%";
+}
+
+/* PROFILE AND SKILL SECTION ENDS HERE */
+.btn-center{
+    text-align: center;
+    margin-top: 3rem;
+}
+.hire-btn{
+     width: 250px;
+     height: 60px;
+     border: 3px solid rgb(65, 65, 65); 
+     font-size: 1rem;
+     font-weight: 600;
+     text-transform: uppercase;
+     letter-spacing: 3px;
+     background: none;
+     color: rgb(65, 65, 65);
+     transition: all 0.3s ease;
+     cursor: pointer;
+     outline: none;
+     margin: 0px  10px;
+}
+.hire-btn:hover{
+    border-color: red;
+    color: red;
+}
+.resume-btn a{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.resume-btn {
+    width: 250px;
+    height: 60px;
+    border: 0;
+    background-color: rgb(65, 65, 65);
+    transition: all 0.3s ease;
+    outline: none;
+    margin: 0 10px;
+}
+.resume-btn:hover{
+   background-color: rgb(0, 0, 0);
+   color: rgb(255, 255, 255);
+}
+/* portfolio area starts here */
+.portfolio h3{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: red;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.portfolio h2{
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+/* portfolio section starts here */
+.projects .project-box{
+    width: 30%;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+.project-box img{
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.project-content{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    padding: 50% 0;
+    text-align: center;
+    transition: all 0.5s;
+}
+.project-btn{
+    width: 180px;
+    height: 40px;
+    background-color: red;
+    border: 0;
+    outline: none;
+    border-radius: 50px;
+}
+.project-content a{
+    font-size: 0.9rem;
+    font-family: 'poppins',sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+}
+.project-box:hover .project-content{
+    left: 0;
+}
+footer {
+    background-color: rgb(0, 0, 0);
+    padding: 5%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-weight: 500;
+}
+@media only screen and (max-width:992px){
+    .inner .mynavbar{
+        width: 50%;
+        position: fixed;
+    }
+    .mynavbar .menu-links{
+        width: 50%;
+    }
+    #click:checked ~ .menu-links{
+        height: 70vh;
+    }
+    .intro h3{
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+    }
+    .intro h1{
+        font-size: 2rem;    
+        margin-bottom: 1rem;
+    }
+    .intro p{
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        margin-bottom: 2rem;
+    }
+    .intro button{
+        width: 180px;
+        margin-bottom: 3rem;
+    }
+    .intro button a{
+        letter-spacing: 1px;
+    }
+    .profile-skills .my-profile,.profile-skills .my-skills{
+        width: 80%;
+        margin: 2rem auto;
+    }
+    .my-skills h3,.my-profile h3{
+        text-align: center;
+    }
+    .my-skills p,{
+        padding: 0;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .my-profile .profile-p {
+        margin-bottom: 2rem;
+        padding: 0;
+        text-align: center;
+    }
+    .projects .project-box{
+        width: 80%;
+        margin: 2rem auto;
+    }    
+}
+
+@media only screen and (max-width:600px){
+    .about h3{
+        margin-top: 3rem;
+    }
+    .about p{
+        padding: 0 2%;
+    }
+    .hire-btn{
+        width: 152px;
+    }
+    .resume-btn{
+        width: 160px;
+    }
+    .social i{
+        font-size: 1.2rem;
+    }
+    .my-profile .profile-p{
+        font-size: 0.9rem;
+    }
+    .my-skills p {
+        padding: 0;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    .hire-btn{
+        margin-bottom: 2rem;
+    }
+    .portfolio h2{
+        margin-bottom: 0;
+    }
+    footer{
+        font-size: 0.9rem;
+    }
+}
